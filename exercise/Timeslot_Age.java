@@ -16,14 +16,14 @@ import java.util.Map;
 public class Timeslot_Age implements Runnable {
 	private String flag;
 	private Map<String, String> result = new HashMap<String, String>();
-	public static List<Map<String, String>> resultMapList; 
+	public static List<Map<String, String>> resultMapList;
 	public int teen;
 	public int twe;
 	public int thir;
 	public int fort;
 	public int fit;
 	public int six;
-	
+
 	public Map<String, String> userData = new HashMap<String, String>();
 
 	public Timeslot_Age(Map<String, String> map, String flag) {
@@ -42,7 +42,7 @@ public class Timeslot_Age implements Runnable {
 
 	private int getCurrentYear() {
 		return Calendar.getInstance().get(Calendar.YEAR);
-		
+
 	}
 
 	public Timeslot_Age() {
@@ -85,48 +85,45 @@ public class Timeslot_Age implements Runnable {
 						FileInputStream fr = new FileInputStream(file);
 						BufferedReader br = new BufferedReader(new InputStreamReader(fr, "euc-kr"));
 						while ((line = br.readLine()) != null) {
-							//TODO rename variable
+							// TODO rename variable
 							String[] token = line.split("\t", -1);
-							try {
-								int fileTimeCode = Integer.parseInt(file.getName().substring(fileTimePos + 1, fileTimePos + 3));
-								
-								int[] dawn = {0,1,2,3,4,5}; 
-								
-								//20180831 마무리(계속)
-								if (fileTimeCode == 0 || fileTimeCode == 1){
-//										(period.get(0).equals(fileTimeCode)) || period.get(1).equals(fileTimeCode)
-//										|| period.get(2).equals(fileTimeCode) || period.get(3).equals(fileTimeCode)
-//										|| period.get(4).equals(fileTimeCode) || period.get(5).equals(fileTimeCode)) {
-									
-									//TODO rename variable	
-									String userId = token[7];
-									
-									//핵심로직
-									if (userData.containsKey(userId)) {
-										int resultAge = calUserAge(userId);
-										if (resultAge >= 60) {
-											six++;
-										} else if (resultAge >= 50 && resultAge < 60) {
-											fit++;
-										} else if (resultAge >= 40 && resultAge < 50) {
-											fort++;
-										} else if (resultAge >= 30 && resultAge < 40) {
-											thir++;
-										} else if (resultAge >= 20 && resultAge < 30) {
-											twe++;
-										} else if (resultAge >= 10 && resultAge < 20) {
-											teen++;
-										}
+
+							int fileTimeCode = Integer
+									.parseInt(file.getName().substring(fileTimePos + 1, fileTimePos + 3));
+
+							// TODO refactoring parameter code
+							// if (Integer.parseInt(period.get(0))>=fileTimeCode&&Integer.parseInt(period.get(5))<=fileTimeCode){
+							if (period.get(0).equals(fileTimeCode) || period.get(1).equals(fileTimeCode)
+									|| period.get(2).equals(fileTimeCode) || period.get(3).equals(fileTimeCode)
+									|| period.get(4).equals(fileTimeCode) || period.get(5).equals(fileTimeCode)) {
+
+								// TODO rename variable
+								String userId = token[7];
+
+								// 핵심로직
+								if (userData.containsKey(userId)) {
+									int resultAge = calUserAge(userId);
+									if (resultAge >= 60) {
+										six++;
+									} else if (resultAge >= 50 && resultAge < 60) {
+										fit++;
+									} else if (resultAge >= 40 && resultAge < 50) {
+										fort++;
+									} else if (resultAge >= 30 && resultAge < 40) {
+										thir++;
+									} else if (resultAge >= 20 && resultAge < 30) {
+										twe++;
+									} else if (resultAge >= 10 && resultAge < 20) {
+										teen++;
 									}
 								}
-							} catch (Exception e) {
-								continue;
 							}
+
 						}
 
 						br.close();
-					} catch (FileNotFoundException e) {
-						e.printStackTrace();
+					} catch (FileNotFoundException fnfe) {
+						fnfe.printStackTrace();
 					} catch (IOException e) {
 						e.printStackTrace();
 					}
@@ -156,13 +153,13 @@ public class Timeslot_Age implements Runnable {
 		int resultAge = getCurrentYear() - extractYear(userId);
 		return resultAge;
 	}
-	
+
 	private int extractYear(String userId) {
 		int year = Integer.parseInt(userData.get(userId).substring(0, 4));
 		return year;
 	}
 
-	//flag 값에 따라 해당하는 시간대 생성 - 새벽, 아침, 오후, 저녁 
+	// flag 값에 따라 해당하는 시간대 생성 - 새벽, 아침, 오후, 저녁
 	public List<String> makePeriod() {
 		List<String> creatPeriod = new ArrayList<String>();
 		if (flag.equals("dawn")) {
