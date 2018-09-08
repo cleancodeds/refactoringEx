@@ -50,5 +50,10 @@ OOP 법칙에 기반한 클린코드 작성, 클린 소프트웨어가 무엇인
 - 그 외 리팩토링, OOP 관련 아티클
 - 객체 지향 생활체조 https://github.com/iamkyu/TIL/blob/master/object-calisthenics/object-calisthenics.md
 - [도서 - 객체지향의 객체지향 사실과 오해 (조영호 저)](http://wikibook.co.kr/object-orientation/)
+- [김창준 애자일 키워드 팟캐스트 - 테스트주도개발](http://www.podbbang.com/ch/14757?e=22396860)
+- [김창준 애자일 키워드 팟캐스트 - 짝프로그래밍](http://www.podbbang.com/ch/14757?e=22408410)
+- [페어프로그래밍 첫 도전기](http://blog.dramancompany.com/2015/11/tom%EA%B3%BC-jaden%EC%9D%98-%EC%B2%AB-%ED%8E%98%EC%96%B4-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%EB%8F%84%EC%A0%84%EA%B8%B0/)
+- [몹프로그래밍](http://www.moreagile.net/2014/12/mob-programming.html)
+
 
 * 본 스터디는 [SLiPP15차 스터디 주제 제안](https://www.slipp.net/wiki/pages/viewpage.action?pageId=30769831)을 참고하였음
