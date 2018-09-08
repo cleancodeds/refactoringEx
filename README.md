@@ -50,3 +50,5 @@ OOP 법칙에 기반한 클린코드 작성, 클린 소프트웨어가 무엇인
 - 그 외 리팩토링, OOP 관련 아티클
 - 객체 지향 생활체조 https://github.com/iamkyu/TIL/blob/master/object-calisthenics/object-calisthenics.md
 - [도서 - 객체지향의 객체지향 사실과 오해 (조영호 저)](http://wikibook.co.kr/object-orientation/)
+
+* 본 스터디는 [SLiPP15차 스터디 주제 제안](https://www.slipp.net/wiki/pages/viewpage.action?pageId=30769831)을 참고하였음
