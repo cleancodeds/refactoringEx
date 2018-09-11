@@ -1,10 +1,12 @@
 # refactoringEx
 - 매주 화,금 아침(08:00~09:00) 리팩토링 실습 및 이론 스터디
+- 매주 월,목 오후 쉬는 시간 레퍼런스 책을 읽고 토의
+  - 정해진 분량을 읽고, 각자 핵심문장 또는 함께 이야기하고 싶은 질문을 세 가지씩 가져옵니다. 가져온 질문(문장)에서 세 가지를 골라 함께 이야기해봅니다.
 - [스터디 로그](https://docs.google.com/document/d/1Ck-qunfVbavIDZcR_C1sJvhs-t_2fGF8vWYzvkzsjZ4/edit?usp=sharing) (스터디 멤버만 접속가능)
 - 08/28 ~ 09/07 스터디원의 실제 작성 코드를 리팩토링
 - 09/08 ~ 실습 + 레퍼런스 같은 진도 읽기
   - 페어프로그래밍 + 코드리뷰
-  - 레퍼런스: 책 - 객체지향 사실과 오해 (조영호)
+  - 레퍼런스: [책 - 객체지향 사실과 오해 (조영호)](http://wikibook.co.kr/object-orientation/)
   - 실습 : [클린코드 강의](https://codesquad.kr/page/specialTdd.html) 실습과제
 
 ## What
